@@ -7,3 +7,11 @@
   <li><%= link_to "Check Out Upcoming Events Around You!", events_path, class: "nav_button" %></li>
 </ul>
 
+<% if !user_signed_in? %>
+  <%= form_tag events_path, :method => 'get' do %>
+    <%= label_tag(:q, "Zip Code:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+<% end %>
+
