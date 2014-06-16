@@ -20,9 +20,4 @@
 
 
 
-// JS for video on homepage
-$(document).ready(function () {
 
-    $(".player").mb_YTPlayer();
-
-});
