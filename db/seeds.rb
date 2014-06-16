@@ -7,11 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Event.create([
-  {title: "Ted Talk on the Mall",
+  {hashtag: "#TEDDC",
+  title: "Ted Talk on the Mall",
+  description: " A TED talk all about Politics, Law, and marble buildings",
   latitude: 38.8901,
-  longitude: -77.0236},
+  longitude: -77.0236,
+  date: "08/20/2014",
+  time: "13:00"},
 
-  {title: "Los Angeles Party",
+  {hashtag: "#AWESOMELA",
+  title: "Los Angeles Party",
+  description: "A huge, secret party. If you want to come, youre not invited.",
   latitude: 34.0522,
-  longitude: -118.2436}
+  longitude: -118.2436,
+  date: "09/15/2014",
+  time: "23:59"}
   ])
