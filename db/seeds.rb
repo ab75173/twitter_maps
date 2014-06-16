@@ -6,8 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Event.create(
-  title: "Ted Talk on the Mall",
-  latitude: 38.89,
-  longitude: -77.0236,
-  )
+Event.create([
+  {title: "Ted Talk on the Mall",
+  latitude: 38.8901,
+  longitude: -77.0236},
+
+  {title: "Los Angeles Party",
+  latitude: 34.0522,
+  longitude: -118.2436}
+  ])

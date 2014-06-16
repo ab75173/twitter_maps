@@ -1,1 +1,8 @@
-Events Index
+Nearby Events:
+<ul>
+  <% @nearby_events.each do |event| %>
+    <li><%= event["title"] %></li>
+  <% end %>
+</ul>
+
+
