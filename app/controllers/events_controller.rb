@@ -2,29 +2,32 @@ class EventsController < ApplicationController
 
   def index
 
-    # cookie maker:
-    cookies.delete(:lat)
-    cookies.delete(:long)
-    cookies[:lat] = 34.052234
-    cookies[:long] = -118.243685
+    # cookies.delete(:lat)
+    # cookies.delete(:long)
 
     events = Event.all
 
     @nearby_events = []
     if user_signed_in?
-      @user = current_user
-      user_lat = @user.latitude
-      user_long = @user.longitude
+      #user is signed in and they are taken from database
+      user = current_user
+      @user_lat = user.latitude
+      @user_long = user.longitude
     else
+      #user is not signed in and is searching for zip
+      if params[:q]
+        zip_param_to_coord
+      else
+        @user_lat = cookies["lat"]
+        @user_long = cookies["long"]
+      end
 
-      user_lat = cookies["lat"]
-      user_long = cookies["long"]
     end
 
-    user_lat_max = user_lat + 0.20
-    user_lat_min = user_lat - 0.20
-    user_long_max = user_long + 0.20
-    user_long_min = user_long - 0.20
+    user_lat_max = @user_lat.to_f + 0.20
+    user_lat_min = @user_lat.to_f - 0.20
+    user_long_max = @user_long.to_f + 0.20
+    user_long_min = @user_long.to_f - 0.20
 
     events.each do |event|
       event_lat = event.latitude
@@ -38,6 +41,23 @@ class EventsController < ApplicationController
 
   def show
 
+  end
+
+  private
+
+  def zip_param_to_coord
+    zip_code = params[:q]
+    cookies[:zip] = zip_code
+    response = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + cookies[:zip])
+    latitude = response["results"][0]["geometry"]["location"]["lat"].to_f
+    longitude = response["results"][0]["geometry"]["location"]["lng"].to_f
+
+    # cookie maker:
+
+    cookies[:lat] = latitude
+    cookies[:long] = longitude
+    @user_lat = cookies["lat"]
+    @user_long = cookies["long"]
   end
 
 end
