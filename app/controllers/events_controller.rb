@@ -4,9 +4,6 @@ class EventsController < ApplicationController
     events = Event.all
     nearby_events = []
 
-<<<<<<< HEAD
-
-=======
     @location_json = HTTParty.get('http://freegeoip.net/json/')
     user_lat = @location_json["latitude"]
     user_long = @location_json["longitude"]
@@ -25,7 +22,6 @@ class EventsController < ApplicationController
     end
 
      @nearby_events = nearby_events
->>>>>>> code allowing user to see only nearby events, by lat and long
   end
 
   def show
