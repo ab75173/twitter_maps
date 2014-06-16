@@ -17,8 +17,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-        <h1>Full Width Video</h1>
-        <h3>Enjoy Adding Full Screen Videos to your Page Sections</h3>
+        <h1>Start Fires</h1>
+        <h3>Engage more people with plans to go somewhere they don't know.</h3>
      </div>
       </div>
     </div>
@@ -26,15 +26,19 @@
 </section>
 <!--Video Section Ends Here-->
 
+
 <ul class="nav">
   <li><%= link_to "Check Out Upcoming Events Around You!", events_path, class: "nav_button" %></li>
 </ul>
 
-<% if !user_signed_in? %>
-  <%= form_tag events_path, :method => 'get', id: "zip-submit" do %>
-    <%= label_tag(:q, "Zip Code:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-<% end %>
+
+<div class="form-group">
+    <% if !user_signed_in? %>
+      <%= form_tag events_path, :method => 'get', id: "zip-submit" do %>
+        <%= label_tag(:q, "Zip Code:", class: "text") %>
+        <%= text_field_tag(:q, "", class: "form-control") %>
+        <%= submit_tag("Search", class: "btn btn-default") %>
+      <% end %>
+    <% end %>
+</div>
 
