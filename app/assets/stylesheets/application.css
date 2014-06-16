@@ -14,3 +14,9 @@
  *= require_self
  *= require bootstrap.min
  */
+html, body,
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
