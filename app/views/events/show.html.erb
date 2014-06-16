@@ -3,6 +3,10 @@
   <li id="event_hashtag"><%= @event.hashtag %></li>
   <li id="event_description"><%= @event.description %></li>
 </ul>
-<body>
-  <div id="map-canvas"/>
-</body>
+
+
+<div id="map-canvas"></div>
+
+<input id="latitude" type="hidden" value="<%= @event.latitude %>">
+<input id="longitude" type="hidden" value="<%= @event.longitude %>">
+
