@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
+
+
+
+
+
+// JS for video on homepage
+$(document).ready(function () {
+
+    $(".player").mb_YTPlayer();
+
+});
