@@ -1,7 +1,16 @@
 Favorite Events:
 <ul>
   <% @favorites.each do |favorite| %>
-    <p><%= favorite.event["title"] %></p>
-    <%= button_to "delete", {controller: :favorites, action: 'destroy', id: favorite.id }, method: :delete %>
+
+    <li>
+      <!-- FAVORITE EVENT TITLE: -->
+      <a href="/events/<%= favorite.event.id %>"><%= favorite.event["title"] %></a>
+     <!--  BUTTON TO REMOVE FAVORITE: -->
+      <%= form_for [@user, favorite], method: :delete do |f| %>
+          <%= f.submit 'Delete Favorite', id: 'destroy' %>
+      <% end %>
+
+    </li>
+>
   <% end %>
 </ul>
