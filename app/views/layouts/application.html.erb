@@ -65,6 +65,32 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/events">See Local Events</a></li>
+           <!--  <% if user_signed_in? %>
+              <li><a href="PUT PATH HERE">Followed Events</a></li>
+            <% end %> -->
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <% if user_signed_in? %>
+                <a href="<%= destroy_user_session_path %>" class="btn btn-default" data-method="delete">  Logout</a>
+                <a href="<%= edit_user_registration_path %>" class="btn btn-default">Edit Account</a>
+              <% else %>
+                <a href="<%= new_user_registration_path %>" class="btn btn-default" >
+                  Sign Up
+                </a>
+                <a href="<%= new_user_session_path %>" class="btn btn-default" >
+                  Sign In
+                </a>
+              <% end %>
+            </div>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
       <!-- END NAVIGATION -->
 
@@ -75,7 +101,7 @@
 
     <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container-fluid">
-        <p class="text-center">Email us an event at <a href="mailto">info@gmail.com</a></p>
+        <p class="text-center">Email us an event at <a href="mailto">twitmaps@gmail.com</a></p>
       </div>
     </nav>
 

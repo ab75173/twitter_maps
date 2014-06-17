@@ -1,0 +1,8 @@
+Favorite Events:
+<ul>
+  <% @favorite_events.each do |event| %>
+    <li><a href="/events/<%= event.id %>"><button class="event_button"><%= event["title"] %></button></a></li>
+  <% end %>
+</ul>
+
+
