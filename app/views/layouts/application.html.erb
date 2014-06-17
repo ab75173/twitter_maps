@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>TwitterMaps</title>
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwQUhbEK21jYYNj_amE04QY6Q5K4uHcHM"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-  <!-- NAVIATION -->
 
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Twitter Map App</a>
-    </div>
+  <head>
+    <title>TwitterMaps</title>
+      <script src="https://maps.googleapis.com/maps/api/js?key=" + ENV["GMAPS_API_KEY"]></script>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+  </head>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/events">Events</a></li>
-        <li><a href="#">Link I</a></li>
-      </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <% if user_signed_in? %>
-          <a href="<%= destroy_user_session_path %>" class="btn btn-default" data-method="delete">Logout</a>
-          <a href="<%= edit_user_registration_path %>" class="btn btn-default">Edit Account</a>
-        <% else %>
-            <a href="<%= new_user_registration_path %>" class="btn btn-default" >
-              Sign Up
-            </a>
-            <a href="<%= new_user_session_path %>" class="btn btn-default" >
-              Sign In
-            </a>
-        <% end %>
 
+  <body>
+
+    <!-- NAVIATION -->
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar  -collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Twitter Map App</a>
         </div>
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
-  <!-- END NAVIGATION -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/events">Events</a></li>
+            <li><a href="#">Link I</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <% if user_signed_in? %>
+                <a href="<%= destroy_user_session_path %>" class="btn btn-default" data-method="delete">  Logout</a>
+                <a href="<%= edit_user_registration_path %>" class="btn btn-default">Edit Account</a>
+              <% else %>
+                <a href="<%= new_user_registration_path %>" class="btn btn-default" >
+                  Sign Up
+                </a>
+                <a href="<%= new_user_session_path %>" class="btn btn-default" >
+                  Sign In
+                </a>
+              <% end %>
 
-<%= yield %>
+            </div>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      <!-- END NAVIGATION -->
+
+    <%= yield %>
 
 
-  <!-- FOOTER -->
+      <!-- FOOTER -->
 
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container-fluid">
-    <p class="text-center">Email us an event at <a href="mailto">info@gmail.com</a></p>
-  </div>
-</nav>
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+        <p class="text-center">Email us an event at <a href="mailto">info@gmail.com</a></p>
+      </div>
+    </nav>
 
-  <!-- END FOOTER -->
+    <!-- END FOOTER -->
 
-</body>
+  </body>
+
+
 </html>
