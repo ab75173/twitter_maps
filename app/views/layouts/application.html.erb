@@ -31,7 +31,7 @@
         <li><a href="#">Link I</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search">
+      <div class="navbar-form navbar-left ">
         <div class="form-group">
           <% if !user_signed_in? %>
             <%= form_tag events_path, :method => 'get', id: "zip-submit" do %>
@@ -40,7 +40,8 @@
               <%= submit_tag("GO", class: "btn btn-default") %>
             <% end %>
           <% end %>
-      </form>
+      </div>
+
 
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
