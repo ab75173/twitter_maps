@@ -24,7 +24,7 @@ html, body,
 #map-canvas {
   float: left;
   margin:20px;
-  width: 50%;
+  width: 65%;
 }
 
 .visuallyhidden {
@@ -61,4 +61,6 @@ html, body,
 #event_description {
   font-family: 'Rock Salt', cursive;
 }
+
+
 
