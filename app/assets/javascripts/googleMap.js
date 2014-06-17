@@ -1,4 +1,66 @@
-// This is a map style which I use below:
+var map
+var circle
+
+function offset(num) {
+    return Math.random() * (num)
+}
+
+function initialize() {
+  var mapOptions = {
+    center: new google.maps.LatLng(parseFloat($('#latitude').val()),parseFloat($('#longitude').val())),
+    zoom: 9,
+    styles: mapStyle,
+    };
+
+  map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
+
+  circle = new google.maps.Circle({
+      map: map,
+      center: new google.maps.LatLng(parseFloat($('#latitude').val()),parseFloat($('#longitude').val())),
+      radius: 50000
+    });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'page:load', initialize);
+
+
+var firstZoom = window.setTimeout(function(){
+    console.log('zoom');
+    // var lat = parseFloat($('#latitude').val());
+    // var lng = parseFloat($('#longitude').val());
+    // var loc = new google.maps.LatLng(lat, lng);
+    // map.setCenter(loc);
+    map.setZoom(11);
+    circle.setRadius(10000)
+} , 3000)
+
+var secondZoom = window.setTimeout(function(){
+    console.log('zoom 2');
+    // var lat = parseFloat($('#latitude').val());
+    // var lng = parseFloat($('#longitude').val());
+    // var loc = new google.maps.LatLng(lat, lng);
+    // map.setCenter(loc);
+    map.setZoom(13);
+    circle.setRadius(3000)
+} , 6000)
+
+var finalZoom = window.setTimeout(function(){
+    console.log('zoom final');
+    var lat = parseFloat($('#latitude').val());
+    var lng = parseFloat($('#longitude').val());
+    var loc = new google.maps.LatLng(lat, lng);
+    map.setCenter(loc);
+    map.setZoom(16);
+    circle.setRadius(3)
+    var marker = new google.maps.Marker({
+      position: loc,
+      map: map,
+      title: 'PARTY!'
+  });
+} , 9000)
+
+
 var mapStyle = [
     {
         "featureType": "water",
@@ -197,21 +259,3 @@ var mapStyle = [
         ]
     }
 ];
-
-
-var latOffset = Math.random() * (0.2 - (-0.2)) + (-0.2);
-var lngOffset = Math.random() * (0.2 - (-0.2)) + (-0.2);
-
-
-function initialize() {
-  var mapOptions = {
-    center: new google.maps.LatLng(parseFloat($('#latitude').val() + parseFloat(latOffset)), parseFloat($('#longitude').val()) + parseFloat(lngOffset)),
-    zoom: 8,
-    styles: mapStyle
-  };
-
-  var map = new google.maps.Map(document.getElementById("map-canvas"),
-      mapOptions);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.addDomListener(window, 'page:load', initialize);
