@@ -1,7 +1,7 @@
 Nearby Events:
 <ul>
   <% @nearby_events.each do |event| %>
-    <li data-event-id="<%= event.id %>"><a href="/events/<%= event.id %>"><button class="event_button"><%= event["title"] %></button></a></li>
+    <li><a href="/events/<%= event.id %>"><button class="event_button"><%= event["title"] %></button></a></li>
   <% end %>
 </ul>
 
