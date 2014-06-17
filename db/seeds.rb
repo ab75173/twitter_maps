@@ -12,12 +12,12 @@ Event.create([
   description: " A TED talk all about Politics, Law, and marble buildings",
   latitude: 38.8901,
   longitude: -77.0236,
-  date_time: "2014-09-12 13:00"},
+  datetime: "2014-09-12 13:00"},
 
   {hashtag: "#AWESOMELA",
   title: "Los Angeles Party",
   description: "A huge, secret party. If you want to come, youre not invited.",
   latitude: 34.0522,
   longitude: -118.2436,
-  date_time: "2014-11-7 23:59"}
+  datetime: "2014-11-7 23:59"}
   ])
