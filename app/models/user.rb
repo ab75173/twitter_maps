@@ -13,15 +13,6 @@ class User < ActiveRecord::Base
 
   end
 
-  def self.find_for_twitter_oauth(auth)
-    where(auth.slice(:provider, :uid)).first_or_create do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-    end
-  end
-
   def self.find_for_twitter_oauth(provider, uid, name, email, signed_in_resource=nil)
     user = User.where(:provider => provider, :uid => uid).first
     unless user
@@ -32,7 +23,7 @@ class User < ActiveRecord::Base
        :password => Devise.friendly_token[0,20]
       )
     end
-  return user
+    return user
   end
 
 end

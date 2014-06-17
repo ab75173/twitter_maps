@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'rb-readline'
 gem 'omniauth-twitter'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
