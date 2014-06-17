@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rb-readline'
 gem 'omniauth-twitter'
+gem 'omniauth'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
