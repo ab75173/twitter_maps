@@ -9,6 +9,7 @@ function initialize() {
   var mapOptions = {
     center: new google.maps.LatLng(parseFloat($('#latitude').val()),parseFloat($('#longitude').val())),
     zoom: 9,
+    scrollwheel: false,
     styles: mapStyle,
     };
 
@@ -58,7 +59,7 @@ var finalZoom = window.setTimeout(function(){
       map: map,
       title: 'PARTY!'
   });
-} , 9000)
+} , 30000)
 
 
 var mapStyle = [

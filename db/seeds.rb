@@ -16,6 +16,15 @@ Event.create([
   hashtag_id: "478919592786395136"
   },
 
+  {hashtag: "#WDIGRADU",
+  title: "WDI class graduation",
+  description: "General Assembly WDI class graduation day!",
+  latitude: 38.9047,
+  longitude: -77.0342,
+  datetime: "2014-08-16 17:30",
+  hashtag_id: ""
+  },
+
   {hashtag: "#AWESOMELA",
   title: "Los Angeles Party",
   description: "A huge, secret party. If you want to come, youre not invited.",
