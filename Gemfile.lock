@@ -157,7 +157,6 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
-  omniauth
   omniauth-twitter
   pg
   pry-rails
