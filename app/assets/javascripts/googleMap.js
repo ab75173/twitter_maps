@@ -201,26 +201,15 @@ var mapStyle = [
 
 var latOffset = Math.random() * (0.2 - (-0.2)) + (-0.2);
 var lngOffset = Math.random() * (0.2 - (-0.2)) + (-0.2);
-// var eventLat = 0;
-// var eventLng = 0;
-
-// function getEvent() {
-
-//   eventLat = $('#latitude').val();
-//   eventLng = $('#longitude').val();
-
-
-// }
-// getEvent();
 
 
 function initialize() {
   var mapOptions = {
-    center: new google.maps.LatLng($('#latitude').val(), $('#longitude').val()),
-    zoom: 8,
-    // styling map here:
+    center: new google.maps.LatLng(parseFloat($('#latitude').val() + parseFloat(latOffset)), parseFloat($('#longitude').val()) + parseFloat(lngOffset)),
+    zoom: 8
     styles: mapStyle
   };
+
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
 }
