@@ -9,6 +9,7 @@ function initialize() {
   var mapOptions = {
     center: new google.maps.LatLng(parseFloat($('#latitude').val()),parseFloat($('#longitude').val())),
     zoom: 9,
+    scrollwheel: false,
     styles: mapStyle,
     };
 
