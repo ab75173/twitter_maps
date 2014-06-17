@@ -30,6 +30,7 @@ html, body,
 #twitter-widget-0 {
   float:right;
   margin:25px 35px 25px 15px;
+
 }
 
 .visuallyhidden {
@@ -47,6 +48,10 @@ html, body,
   background: url('https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png') no-repeat;
   width: 158px;
   height: 28px;
+}
+
+.twitter-timeline {
+  margin: 20px;
 }
 
 .event_info {
@@ -68,4 +73,15 @@ html, body,
 }
 
 
+@media all and (max-width: 500px) {
+  #map-canvas {
+  float: left;
+  margin:20px;
+  width: 100%;
+}
+
+.twitter-timeline {
+  margin: 20px;
+}
+}
 

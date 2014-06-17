@@ -58,7 +58,7 @@ var finalZoom = window.setTimeout(function(){
       map: map,
       title: 'PARTY!'
   });
-} , 9000)
+} , 30000)
 
 
 var mapStyle = [
