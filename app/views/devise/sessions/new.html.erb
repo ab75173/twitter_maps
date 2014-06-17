@@ -1,6 +1,6 @@
 <h2>Sign in</h2>
 
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+<a href="<%= user_omniauth_authorize_path(:twitter) %>"><img src="https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"></a>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group"><%= f.label :email %><br />
