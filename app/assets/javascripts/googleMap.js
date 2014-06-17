@@ -41,8 +41,8 @@ var secondZoom = window.setTimeout(function(){
     // var lng = parseFloat($('#longitude').val());
     // var loc = new google.maps.LatLng(lat, lng);
     // map.setCenter(loc);
-    map.setZoom(13);
-    circle.setRadius(3000)
+    map.setZoom(14);
+    circle.setRadius(2000)
 } , 6000)
 
 var finalZoom = window.setTimeout(function(){

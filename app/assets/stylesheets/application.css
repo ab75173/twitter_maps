@@ -23,8 +23,13 @@ html, body,
 
 #map-canvas {
   float: left;
-  margin:20px;
-  width: 65%;
+  margin:25px 25px 25px 35px;
+  width: 60%;
+}
+
+#twitter-widget-0 {
+  float:right;
+  margin:25px 35px 25px 15px;
 }
 
 .visuallyhidden {
