@@ -38,10 +38,6 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
-  def favorites
-
-  end
-
   private
 
   def zip_param_to_coord

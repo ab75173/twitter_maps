@@ -10,6 +10,13 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   resources :users, only: [:show] do
     resources :events, only: [:index, :show]
+    resources :favorites
   end
+
+
+  # devise_scope :user do
+  #   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  # end
+
 
 end

@@ -3,6 +3,17 @@
 <p id="event_description"><%= @event.description %></p>
 <p id="event_hashtag"><%= @event.hashtag %></p>
 
+<!-- <form method="POST" action="/users/<%= current_user.id %>/favorites">
+    <button>Favorite This Event</button>
+    <input name="event_id" id="event_id" type="hidden" value="<%= @event.id %>">
+</form> -->
+
+<%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
+  <%= hidden_field_tag(:event_id, @event.id, ) %>
+  <%= hidden_field_tag(:user_id, current_user.id, ) %>
+  <%= submit_tag("Favorite") %>
+<% end %>
+
 
 <div id="map-canvas"></div>
 
