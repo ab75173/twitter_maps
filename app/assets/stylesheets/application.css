@@ -23,6 +23,7 @@ html, body,
 
 #map-canvas {
   float: left;
+  margin:20px;
   width: 50%;
 }
 
@@ -42,3 +43,22 @@ html, body,
   width: 158px;
   height: 28px;
 }
+
+.event_info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#event_hashtag {
+  font-size:30px;
+  font-weight:bold;
+}
+
+#event_title{
+  font-family: 'Frijole', cursive;
+}
+
+#event_description {
+  font-family: 'Rock Salt', cursive;
+}
+
