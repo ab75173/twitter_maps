@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
    before_action :find_user
 
   def index
-    @favorites = @user.events
+    @favorites = @user.favorites
   end
 
   def create
@@ -10,6 +10,11 @@ class FavoritesController < ApplicationController
       user_id: params[:user_id],
       event_id: params[:event_id]
       })
+    redirect_to user_favorites_path
+  end
+
+  def destroy
+    Favorite.find(params[:id]).destroy
     redirect_to user_favorites_path
   end
 
