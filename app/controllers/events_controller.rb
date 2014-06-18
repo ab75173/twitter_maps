@@ -49,7 +49,7 @@ class EventsController < ApplicationController
       config.access_token_secret = "Kgp4Z4iojtjXiEQO6n1toHVHtKMS9D44SowfkAJDjL7le"
     end
 
-    @count = @client.search("#teddc", :result_type => "recent").count
+    @count = @client.search(@event.hashtag, :result_type => "recent").count
   end
 
   private
