@@ -28,9 +28,8 @@ html, body,
 }
 
 #twitter-widget-0 {
-  float:right;
-  margin:25px 35px 25px 15px;
 
+  width:25%;
 }
 
 .visuallyhidden {
@@ -52,11 +51,12 @@ html, body,
 
 .twitter-timeline {
   margin: 20px;
+  width: 20%;
 }
 
 div.event_info {
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 #event_hashtag {
@@ -84,10 +84,12 @@ div.event_info {
   margin:20px;
   width: 100%;
 }
-
-.non_map {
-  margin: 20px;
+  .non-map {
+    float:left;
+  }
 }
+
+
 
 
 
