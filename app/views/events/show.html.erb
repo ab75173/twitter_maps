@@ -13,19 +13,21 @@
 
 </div>
 
-<% if user_signed_in? && current_user && @favorite == nil %>
-  <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
-  <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
-    <%= hidden_field_tag(:event_id, @event.id, ) %>
-    <%= hidden_field_tag(:user_id, current_user.id, ) %>
-    <%= submit_tag("Subscribe") %>
-  <% end %>
-<% elsif user_signed_in? && current_user && current_user.id != @favorite.user_id %>
-  <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
-  <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
-    <%= hidden_field_tag(:event_id, @event.id, ) %>
-    <%= hidden_field_tag(:user_id, current_user.id, ) %>
-    <%= submit_tag("Subscribe") %>
+<% if user_signed_in? %>
+  <% if current_user && @favorite == nil %>
+    <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
+    <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
+      <%= hidden_field_tag(:event_id, @event.id, ) %>
+      <%= hidden_field_tag(:user_id, current_user.id, ) %>
+      <%= submit_tag("Subscribe") %>
+    <% end %>
+  <% elsif current_user && current_user.id != @favorite.user_id %>
+    <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
+    <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
+      <%= hidden_field_tag(:event_id, @event.id, ) %>
+      <%= hidden_field_tag(:user_id, current_user.id, ) %>
+      <%= submit_tag("Subscribe") %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -36,8 +38,6 @@
 </div>
 
 <p><%= @count %></p>
-
-
 
 
 
