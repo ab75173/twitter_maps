@@ -88,20 +88,15 @@ html, body,
   font-family: 'Frijole', cursive;
 }
 
-/*A DIV GRADIENT:*/
+
 #outside {
-background: #ba2527; /* Old browsers */
-background: -moz-linear-gradient(top, #ba2527 0%, #e8d22c 50%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ba2527), color-stop(50%,#e8d22c), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(to bottom, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* W3C */
+border-top: 15px solid white;
+border-left: 25px solid white;
+border-right: 25px solid white;
 }
 
 form {
   text-align: left;
-  width: 100%;
 }
 
 #prompt {
