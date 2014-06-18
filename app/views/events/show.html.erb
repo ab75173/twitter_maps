@@ -13,8 +13,15 @@
   <p class="visuallyhidden" id="event_address"> <%= @event.address %></p>
 </div>
 
-
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user && @favorite == nil %>
+  <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
+  <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
+    <%= hidden_field_tag(:event_id, @event.id, ) %>
+    <%= hidden_field_tag(:user_id, current_user.id, ) %>
+    <%= submit_tag("Favorite") %>
+  <% end %>
+<% elsif user_signed_in? && current_user && current_user.id != @favorite.user_id %>
+  <!-- SHOWS BUTTON TO 'FAVORITE' AN EVENT: -->
   <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
     <%= hidden_field_tag(:event_id, @event.id, ) %>
     <%= hidden_field_tag(:user_id, current_user.id, ) %>
@@ -22,9 +29,7 @@
   <% end %>
 <% end %>
 
-
-
-
+<div id="map-canvas"></div>
 
 <a class="twitter-timeline" width="400" height="400"href="https://twitter.com/search?q=<%= @event .hashtag %>" data-widget-id="<%= @event.hashtag_id %>">Tweets about "#<%= @event.hashtag %>"</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
