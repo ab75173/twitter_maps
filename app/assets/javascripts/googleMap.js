@@ -10,6 +10,11 @@ function initialize() {
     center: new google.maps.LatLng(parseFloat($('#latitude').val()),parseFloat($('#longitude').val())),
     zoom: 9,
     scrollwheel: false,
+    disableDefaultUI: true,
+    draggable: false,
+    panControl: false,
+    zoomControl: false,
+    disableDoubleClickZoom: true,
     styles: mapStyle,
     };
 
