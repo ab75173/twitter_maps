@@ -21,6 +21,13 @@ html, body,
   padding: 0px;
 }
 
+#content_wrapper {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
 #map-canvas {
   float: left;
   margin:25px 25px 25px 35px;
@@ -54,14 +61,11 @@ html, body,
   width: 20%;
 }
 
-div.event_info {
-  text-align: center;
-  margin: 10px;
-}
 
 #event_hashtag {
   font-size:30px;
   font-weight:bold;
+  text-align: center;
 }
 
 #event_title{
