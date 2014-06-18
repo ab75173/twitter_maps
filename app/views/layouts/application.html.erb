@@ -53,17 +53,23 @@
 
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <a href="<%= user_omniauth_authorize_path(:twitter) %>"><img src="https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"></a>
         <% if user_signed_in? %>
             <a href="<%= destroy_user_session_path %>" class="btn btn-default" data-method="delete">Logout</a>
             <a href="<%= edit_user_registration_path %>" class="btn btn-default">Edit Account</a>
         <% else %>
-          <a href="<%= new_user_registration_path %>" class="btn btn-default" >
-            Sign Up
-          </a>
-          <a href="<%= new_user_session_path %>" class="btn btn-default" >
-            Sign In
-          </a>
+
+          <div class='registration btn btn-default'> Join/Login
+          </div>
+
+          <div class='showOptions visuallyhidden'>
+              <a href="<%= new_user_registration_path %>" class="btn btn-default" >
+                Sign Up
+              </a>
+              <a href="<%= new_user_session_path %>" class="btn btn-default" >
+                Sign In
+              </a>
+              <a href="<%= user_omniauth_authorize_path(:twitter) %>"><img src="https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"></a>
+          </div>
         <% end %>
 
 
