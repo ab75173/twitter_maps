@@ -81,6 +81,11 @@ html, body,
   font-size: 40px;
 }
 
+#fancy_font{
+  font-family: 'Frijole', cursive;
+}
+
+
 
 @media all and (max-width: 500px) {
   #map-canvas {
