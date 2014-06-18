@@ -1,39 +1,41 @@
 <div id="outside">
   <div id="content_wrapper">
-    <p id="fancy_font"><h1>Contact Us</h1></p>
+    <h1><p id="fancy_font">Contact Us</p></h1>
 
-    <h2>Want us to hype up your next party?</h2>
+    <h2>Set your next public event on Fyre!</h2>
     <p>Please complete the form below and you will hear from us within 2-3 business days</p>
     <%= form_tag do %>
-      <%= label_tag :name %>
-      <%= text_field_tag :name %>
+      <%= label_tag :basic_information %>
       <br>
-      <%= label_tag :email_address %>
-      <%= text_field_tag :email_address %>
+      <p id="prompt"><%= label_tag :name %></p>
+      <%= text_field_tag :name,params[:field], id: "field" %>
       <br>
-      <%= label_tag :phone_number %>
-      <%= text_field_tag :phone_number %>
+      <p id="prompt"><%= label_tag :email_address %></p>
+      <%= text_field_tag :email_address,params[:field], id: "field" %>
       <br>
-      <%= label_tag :event_date %>
-      <%= text_field_tag :event_date %>
+      <p id="prompt"><%= label_tag :phone_number %></p>
+      <%= text_field_tag :phone_number,params[:field], id: "field" %>
       <br>
-      <%= label_tag :event_time %>
-      <%= text_field_tag :event_time %>
+      <p id="prompt"><%= label_tag :event_date %></p>
+      <%= text_field_tag :event_date,params[:field], id: "field" %>
+      <br>
+      <p id="prompt"><%= label_tag :event_time %></p>
+      <%= text_field_tag :event_time,params[:field], id: "field" %>
       <br>
       <%= label_tag :party_location %>
       <br>
-      <%= label_tag :address %>
-      <%= text_field_tag :party_address %>
+      <p id="prompt"><%= label_tag :address %></p>
+      <%= text_field_tag :party_address,params[:field], id: "field" %>
       <br>
-      <%= label_tag :city %>
-      <%= text_field_tag :party_city %>
+      <p id="prompt"><%= label_tag :city %></p>
+      <%= text_field_tag :party_city,params[:field], id: "field" %>
       <br>
-      <%= label_tag :state %>
-      <%= text_field_tag :party_state %>
+      <p id="prompt"><%= label_tag :state %></p>
+      <%= text_field_tag :party_state,params[:field], id: "field" %>
       <br>
-      <%= label_tag :party_description %>
-      <%= text_area_tag :party_description %>
-      <br>
+      <p id="prompt"><%= label_tag :party_description %></p>
+     <%= text_area_tag :party_description,params[:field], id: "field" %>
+      <br><br>
       <%= submit_tag "Submit"%>
     <% end %>
   </div>

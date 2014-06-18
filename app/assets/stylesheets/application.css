@@ -96,6 +96,21 @@ background: -ms-linear-gradient(top, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* IE
 background: linear-gradient(to bottom, #ba2527 0%,#e8d22c 50%,#ffffff 100%); /* W3C */
 }
 
+form {
+  text-align: left;
+  width: 100%;
+}
+
+#prompt {
+  text-align: left;
+}
+
+#field {
+  border: 2px solid black;
+  text-align: center;
+  width: 80%;
+}
+
 @media all and (max-width: 500px) {
   #map-canvas {
   float: left;
