@@ -10,7 +10,7 @@
   <p id="event_date_time"><%= @event.datetime.strftime("%m/%d/%Y") %> at <%= @event.datetime.strftime("%I:%M") %></p>
   <p id="event_description"><%= @event.description %></p>
   <p id="event_hashtag"><%= @event.hashtag %></p>
-  <p class="visuallyhidden" id="event_address"> <%= @event.address %></p>
+
 </div>
 
 <% if user_signed_in? && current_user && @favorite == nil %>
@@ -35,7 +35,7 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
-
+<p><%= @count %></p>
 
 
 
