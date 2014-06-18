@@ -10,7 +10,7 @@ class FavoritesController < ApplicationController
       user_id: params[:user_id],
       event_id: params[:event_id]
       })
-    # UserMailer.notification_email(current_user).deliver
+    UserMailer.notification_email(current_user).deliver
     redirect_to user_favorites_path(current_user)
   end
 

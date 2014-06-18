@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'letter_opener', group: :development
 gem 'rb-readline'
 gem 'omniauth-twitter'
 gem 'omniauth'
