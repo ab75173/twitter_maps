@@ -72,6 +72,11 @@ html, body,
   font-family: 'Rock Salt', cursive;
 }
 
+#event_address {
+
+  font-size: 40px;
+}
+
 
 @media all and (max-width: 500px) {
   #map-canvas {

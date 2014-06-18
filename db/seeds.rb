@@ -10,26 +10,42 @@ Event.create([
   {hashtag: "#TEDDC",
   title: "Ted Talk on the Mall",
   description: " A TED talk all about Politics, Law, and marble buildings",
-  latitude: 38.8901,
-  longitude: -77.0236,
+  latitude: 38.905197,
+  longitude: -77.037989,
   datetime: "2014-09-12 13:00",
-  hashtag_id: "478919592786395136"
+  hashtag_id: "478919592786395136",
+  address: "1145 17th Street, NW",
+  city: "Washington",
+  state: "DC",
+  zip_code: "20036"
   },
 
   {hashtag: "#WDIGRADU",
-  title: "WDI class graduation",
+  title: "WDI Class Graduation",
   description: "General Assembly WDI class graduation day!",
-  latitude: 38.9047,
-  longitude: -77.0342,
+  latitude: 38.904853,
+  longitude: -77.034003,
   datetime: "2014-08-16 17:30",
-  hashtag_id: ""
+  hashtag_id: "479254328838868992",
+  address: "1355 15th Street NW",
+  city: "Washington",
+  state: "DC",
+  zip_code: "20005"
   },
 
   {hashtag: "#AWESOMELA",
   title: "Los Angeles Party",
   description: "A huge, secret party. If you want to come, youre not invited.",
-  latitude: 34.0522,
-  longitude: -118.2436,
+  latitude: 34.081193,
+  longitude: -118.385282,
   datetime: "2014-11-7 23:59",
-  hashtag_id: "478905944500215808"}
+  hashtag_id: "478905944500215808",
+  address: "606 N Robertson Blvd",
+  city: "West Hollywood",
+  state: "CA",
+  zip_code: "90069"
+  },
+
   ])
+
+

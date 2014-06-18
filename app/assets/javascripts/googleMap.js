@@ -28,20 +28,12 @@ google.maps.event.addDomListener(window, 'page:load', initialize);
 
 var firstZoom = window.setTimeout(function(){
     console.log('zoom');
-    // var lat = parseFloat($('#latitude').val());
-    // var lng = parseFloat($('#longitude').val());
-    // var loc = new google.maps.LatLng(lat, lng);
-    // map.setCenter(loc);
     map.setZoom(11);
     circle.setRadius(10000)
 } , 3000)
 
 var secondZoom = window.setTimeout(function(){
     console.log('zoom 2');
-    // var lat = parseFloat($('#latitude').val());
-    // var lng = parseFloat($('#longitude').val());
-    // var loc = new google.maps.LatLng(lat, lng);
-    // map.setCenter(loc);
     map.setZoom(14);
     circle.setRadius(2000)
 } , 6000)
@@ -59,7 +51,8 @@ var finalZoom = window.setTimeout(function(){
       map: map,
       title: 'PARTY!'
   });
-} , 30000)
+    $('#event_address').removeClass('visuallyhidden');
+} , 9000)
 
 
 var mapStyle = [
