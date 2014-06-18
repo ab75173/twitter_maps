@@ -38,9 +38,10 @@ class EventsController < ApplicationController
     # GETS THE EVENT BY ITS ID IN PARAMS:
     @event = Event.find(params[:id])
     # FINDS AN EXISTING FAVORITE IF IT HAS CURRENT USER ID AND CURRENT EVENT ID
-    @favorite = Favorite.find_by(event_id: @event.id, user_id: current_user.id)
+    if user_signed_in?
+      @favorite = Favorite.find_by(event_id: @event.id, user_id: current_user.id)
+    end
 
-      # binding.pry
   end
 
   private
