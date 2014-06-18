@@ -43,10 +43,10 @@ class EventsController < ApplicationController
     end
 
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = "HFJtymOEjQ6mc9FASGDXyp2KS"
-      config.consumer_secret     = "wZAVQLDSIVyoiogZn1owCIs0inuryp6whAtl6BdzTHcaQx4f93"
-      config.access_token        = "300381691-gTe1rOB3UxjtaaP0WBoACcIUXj5mt2czfguX0KrB"
-      config.access_token_secret = "Kgp4Z4iojtjXiEQO6n1toHVHtKMS9D44SowfkAJDjL7le"
+      config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
+      config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
+      config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
+      config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
     end
 
     @count = @client.search(@event.hashtag, :result_type => "recent").count

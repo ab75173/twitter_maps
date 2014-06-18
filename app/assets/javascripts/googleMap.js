@@ -1,5 +1,5 @@
-var map
-var circle
+var map;
+var circle;
 
 function offset(num) {
     return Math.random() * (num)
