@@ -45,7 +45,6 @@
           <% if !user_signed_in? %>
             <%= form_tag events_path, :method => 'get', id: "zip-submit" do %>
               <%= text_field_tag(:q, "", class: "form-control", placeholder: "Zip Code") %>
-              <%= submit_tag("GO", class: "btn btn-default") %>
             <% end %>
           <% end %>
         </div>
