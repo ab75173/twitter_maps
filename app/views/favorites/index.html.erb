@@ -6,7 +6,7 @@
 
       <li>
         <!-- FAVORITE EVENT TITLE: -->
-        <a href="/events/<%= favorite.event.id %>"><%= favorite.event["title"] %></a>
+        <%= link_to favorite.event["title"],"/events/#{favorite.event.id}" %>
        <!--  BUTTON TO REMOVE FAVORITE: -->
         <%= form_for [@user, favorite], method: :delete do |f| %>
             <%= f.submit 'Unsubscribe', id: 'destroy' %>
