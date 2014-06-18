@@ -27,22 +27,4 @@
 <!--Video Section Ends Here-->
 
 
-<ul class="nav">
-  <li><%= link_to "Check Out Upcoming Events Around You!", events_path, class: "nav_button" %></li>
-</ul>
-
-<!-- OLD ZIP FORM for reference
-
-<div class="form-group">
-    <% if !user_signed_in? %>
-      <%= form_tag events_path, :method => 'get', id: "zip-submit" do %>
-        <%= label_tag(:q, "Zip Code:", class: "text") %>
-        <%= text_field_tag(:q, "", class: "form-control") %>
-        <%= submit_tag("Search", class: "btn btn-default") %>
-      <% end %>
-    <% end %>
-</div>
-
--->
-
 
