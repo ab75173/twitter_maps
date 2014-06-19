@@ -153,9 +153,13 @@ border-right: 25px solid white;
   margin-right: auto;
 }
 
+.sign-up {
+  margin: 0 auto;
+  width: 440px;
+}
+
 
 @media all and (max-width: 500px) {
-
 
 
 #map-canvas {

@@ -1,23 +1,25 @@
-<h2>Sign up</h2>
-<div class='formHolder'>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="sign-up">
+  <h2>Sign up</h2>
+  <div class='formHolder'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do | f| %>
+    <%= devise_error_messages! %>
 
-  <div class="form-group"><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+    <div class="form-group"><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
 
-  <div class="form-group"><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+    <div class="form-group"><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
 
-  <div class="form-group"><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+    <div class="form-group"><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
 
-  <div class="form-group"><%= f.label :zip_code %><br />
-    <%= f.text_field :zip_code, maxlength: 5, class: "form-control" %></div>
+    <div class="form-group"><%= f.label :zip_code %><br />
+      <%= f.text_field :zip_code, maxlength: 5, class: "form-control" %></div>
 
-  <div class="form-group"><%= f.submit "Sign up", class: "btn btn-default" %></div>
+    <div class="form-group"><%= f.submit "Sign up", class: "btn btn-default" %></div>
 
-<% end %>
+  <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+
+
