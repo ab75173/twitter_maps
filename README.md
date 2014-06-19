@@ -14,7 +14,7 @@
 * Ruby on Rails 4.1.1
 * PostgreSQL Database
 * Authentication & Authorization using [Devise](https://github.com/plataformatec/devise) and [OmniAuth](https://github.com/intridea/omniauth)
-* Twitter integration using the Twitter API
+* Twitter integration using the [Twitter REST API](https://dev.twitter.com/docs/api/1.1)
 * Testing using using [rspec-rails](https://github.com/rspec/rspec-rails), [capybara](https://github.com/jnicklas/capybara), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) and [factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails)
 * CSS styling using [Bootstrap](http://getbootstrap.com/)
 
