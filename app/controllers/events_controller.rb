@@ -48,7 +48,6 @@ class EventsController < ApplicationController
       config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
       config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
     end
-
     @count = @client.search(@event.hashtag, :result_type => "recent").count
   end
 
