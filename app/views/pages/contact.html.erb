@@ -8,33 +8,33 @@
       <%= label_tag :basic_information %>
       <br>
       <p id="prompt"><%= label_tag :name %></p>
-      <%= text_field_tag :name,params[:field], id: "field" %>
+      <%= text_field_tag :name,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :email_address %></p>
-      <%= text_field_tag :email_address,params[:field], id: "field" %>
+      <%= text_field_tag :email_address,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :phone_number %></p>
-      <%= text_field_tag :phone_number,params[:field], id: "field" %>
+      <%= text_field_tag :phone_number,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :event_date %></p>
-      <%= text_field_tag :event_date,params[:field], id: "field" %>
+      <%= text_field_tag :event_date,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :event_time %></p>
-      <%= text_field_tag :event_time,params[:field], id: "field" %>
+      <%= text_field_tag :event_time,params[:field], class: "form-control", id: "field" %>
       <br>
       <%= label_tag :party_location %>
       <br>
       <p id="prompt"><%= label_tag :address %></p>
-      <%= text_field_tag :party_address,params[:field], id: "field" %>
+      <%= text_field_tag :party_address,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :city %></p>
-      <%= text_field_tag :party_city,params[:field], id: "field" %>
+      <%= text_field_tag :party_city,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :state %></p>
-      <%= text_field_tag :party_state,params[:field], id: "field" %>
+      <%= text_field_tag :party_state,params[:field], class: "form-control", id: "field" %>
       <br>
       <p id="prompt"><%= label_tag :party_description %></p>
-     <%= text_area_tag :party_description,params[:field], id: "field" %>
+     <%= text_area_tag :party_description,params[:field], class: "form-control", id: "field" %>
       <br><br>
       <%= submit_tag "Submit"%>
     <% end %>
