@@ -3,26 +3,6 @@
 
   <input id="please ignore the data above, and enjoy a secret_sandwich" type="hidden" img src="http://upload.wikimedia.org/wikipedia/commons/2/20/Bolgona_sandwich.jpg">
 
-
-  <% if user_signed_in? %>
-    <% if @favorite == nil %>
-      <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
-      <%= form_tag(user_favorites_path(current_user), method: "post",   authenticity_token: true) do %>
-        <%= hidden_field_tag(:event_id, @event.id, ) %>
-        <%= hidden_field_tag(:user_id, current_user.id, ) %>
-        <%= submit_tag("Subscribe") %>
-      <% end %>
-    <% elsif current_user.id != @favorite.user_id %>
-      <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
-      <%= form_tag(user_favorites_path(current_user), method: "post",   authenticity_token: true) do %>
-        <%= hidden_field_tag(:event_id, @event.id, ) %>
-        <%= hidden_field_tag(:user_id, current_user.id, ) %>
-        <%= submit_tag("Subscribe") %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-
   <div class="col-md-4" "event-info">
     <h1 id="event_title"><%= @event.title %></h1>
   </div>
@@ -36,6 +16,29 @@
     <p class="visuallyhidden" id="event_clue_one"><%= @event.event_clue_one %></p>
     <p class="visuallyhidden" id="event_clue_two"><%= @event.event_clue_two %></p>
     <p class="visuallyhidden" id="event_address"> <%= @event.address %></p>
+
+    <div class="form-group">
+      <% if user_signed_in? %>
+        <% if @favorite == nil %>
+          <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
+          <%= form_tag(user_favorites_path(current_user), method: "post",       authenticity_token: true) do %>
+            <%= hidden_field_tag(:event_id, @event.id, ) %>
+            <%= hidden_field_tag(:user_id, current_user.id, ) %>
+            <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
+          <% end %>
+        <% elsif current_user.id != @favorite.user_id %>
+          <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
+          <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
+            <%= hidden_field_tag(:event_id, @event.id, ) %>
+            <%= hidden_field_tag(:user_id, current_user.id, ) %>
+            <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+
+
+
   </div>
 
   <div class="col-md-4">
