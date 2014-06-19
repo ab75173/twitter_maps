@@ -1,40 +1,29 @@
 <div class="contact">
-    <h1><p id="fancy_font">Contact Us</p></h1>
+    <h1><div>Contact Us</div></h1>
 
     <h2>Set your next public event on Fire!</h2>
     <p>Please complete the form below and you will hear from us within 2-3 business days</p>
     <%= form_tag do %>
-      <%= label_tag :basic_information %>
-      <br>
-      <p class="form-group"><%= label_tag :name %></p>
-      <%= text_field_tag :name,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :email_address %></p>
-      <%= text_field_tag :email_address,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :phone_number %></p>
-      <%= text_field_tag :phone_number,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :event_date %></p>
-      <%= text_field_tag :event_date,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :event_time %></p>
-      <%= text_field_tag :event_time,params[:field], class: "form-control" %>
-      <br>
-      <%= label_tag :party_location %>
-      <br>
-      <p class="form-group"><%= label_tag :address %></p>
-      <%= text_field_tag :party_address,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :city %></p>
-      <%= text_field_tag :party_city,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :state %></p>
-      <%= text_field_tag :party_state,params[:field], class: "form-control" %>
-      <br>
-      <p class="form-group"><%= label_tag :party_description %></p>
-     <%= text_area_tag :party_description,params[:field], class: "form-control" %>
-      <br><br>
+      <h3><%= label_tag :basic_information %></h3>
+      <div class="form-group"><%= label_tag :name %><br />
+      <%= text_field_tag :name,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :email_address %><br />
+      <%= text_field_tag :email_address,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :phone_number %><br />
+      <%= text_field_tag :phone_number,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :event_date %><br />
+      <%= text_field_tag :event_date,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :event_time %><br />
+      <%= text_field_tag :event_time,params[:field], class: "form-control" %></div>
+      <h3><%= label_tag :party_location %></h3>
+      <div class="form-group"><%= label_tag :address %><br />
+      <%= text_field_tag :party_address,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :city %><br />
+      <%= text_field_tag :party_city,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :state %><br />
+      <%= text_field_tag :party_state,params[:field], class: "form-control" %></div>
+      <div class="form-group"><%= label_tag :party_description %><br />
+     <%= text_area_tag :party_description,params[:field], class: "form-control" %></div>
       <%= submit_tag "Submit", class: "btn btn-default"%>
-    <% end %>
-</div>
+    <% end %><br />
+<div>
