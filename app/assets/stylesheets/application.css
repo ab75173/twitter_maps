@@ -40,17 +40,10 @@ html, body,
 }
 
 #map-canvas {
-  float: left;
-  margin:25px 25px 25px 35px;
-  width: 60%;
+  display: block;
+  width: 100%;
 }
 
-
-
-#twitter-widget-0 {
-
-  width:25%;
-}
 
 .visuallyhidden {
   border: 0;
@@ -69,15 +62,6 @@ html, body,
   height: 28px;
 }
 
-.twitter-timeline {
-  margin: 20px;
-  width: 20%;
-}
-
-#event_info {
-  text-align: center;
-}
-
 #event_hashtag {
   font-size:30px;
   font-weight:bold;
@@ -86,6 +70,7 @@ html, body,
 
 #event_title{
   font-family: 'Frijole', cursive;
+  text-align: center;
 }
 
 #event_description {
@@ -93,7 +78,6 @@ html, body,
 }
 
 #event_address {
-
   font-size: 40px;
 }
 
@@ -143,13 +127,11 @@ border-right: 25px solid white;
 
 .favListContainer{
   width: 40%;
-
 }
 
 .sub{
   padding-left: 6%;
 }
-
 
 #landing_title{
     color: white;
@@ -169,8 +151,13 @@ border-right: 25px solid white;
     text-align: center;
   }
 
+.twitter-timeline {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/*=============================================================================*/
+
 @media all and (max-width: 500px) {
 
 
