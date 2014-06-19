@@ -18,7 +18,8 @@ html, body,
 
 
 #map-canvas {
-  height: 100%;
+  display: block;
+  height: 550px;
   margin: 0px;
   padding: 0px;
 }
@@ -37,11 +38,6 @@ html, body,
   border-radius: 10px;
   margin: 20px;
   padding-top: 10px;
-}
-
-#map-canvas {
-  display: block;
-  width: 100%;
 }
 
 
