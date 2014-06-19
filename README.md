@@ -36,5 +36,7 @@ A full list of user stories can be found by looking at [this Pivotal Tracker Pro
 
 ### ERD
 
+![ERD](ERD.png)
+
 ---
 ###### Written by Mikael Davis
