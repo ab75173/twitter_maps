@@ -109,6 +109,31 @@ form {
   width: 80%;
 }
 
+#destroy{
+  margin: 2%;
+}
+
+#fav {
+  color: #000;
+  font-family: 'Rock Salt', cursive;
+  font-size: 20px;
+  float: left;
+  padding: 2%;
+  }
+
+.favList{
+  list-style-type: none;
+}
+
+.favListContainer{
+  width: 40%;
+
+}
+
+.sub{
+  padding-left: 6%;
+}
+
 @media all and (max-width: 500px) {
   #map-canvas {
   float: left;

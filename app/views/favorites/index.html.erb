@@ -1,18 +1,19 @@
 
 <% if user_signed_in? %>
-  Favorite Events:
+  <h2 class='sub'>Subscribed Events:</h2>
+  <div class='favListContainer'>
   <ul>
     <% @favorites.each do |favorite| %>
-
-      <li>
+      <li class='favList'>
         <!-- FAVORITE EVENT TITLE: -->
-        <%= link_to favorite.event["title"],"/events/#{favorite.event.id}" %>
+        <%= link_to favorite.event["title"],"/events/#{favorite.event.id}", id: 'fav' %>
        <!--  BUTTON TO REMOVE FAVORITE: -->
         <%= form_for [@user, favorite], method: :delete do |f| %>
-            <%= f.submit 'Unsubscribe', id: 'destroy' %>
+            <%= f.submit 'Unsubscribe', class: "btn btn-default", id: 'destroy' %>
         <% end %>
 
       </li>
     <% end %>
   </ul>
+  </div>
 <% end %>
