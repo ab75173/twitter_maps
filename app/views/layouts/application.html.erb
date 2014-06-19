@@ -6,6 +6,7 @@
 
    <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,900' rel='stylesheet' type='text/css'>
    <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -32,11 +33,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/events">Events</a></li>
+        <li class="active"><a href="/events">Nearby Events</a></li>
         <li class="active"><a href="/about">About Us</a></li>
         <li class="active"><a href="/contact">Contact Us</a></li>
         <% if user_signed_in? %>
-          <li><%= link_to "My Favorites", user_favorites_path(current_user) %></li>
+          <li><%= link_to "My Subscriptions", user_favorites_path(current_user) %></li>
         <% end %>
       </ul>
 
@@ -82,11 +83,11 @@
 </nav>
 
       <!-- END NAVIGATION -->
-
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= yield %>
 
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   </body>
 
 

@@ -15,6 +15,8 @@
  *= require bootstrap.min
  */
 html, body,
+
+
 #map-canvas {
   height: 100%;
   margin: 0px;
@@ -96,7 +98,7 @@ html, body,
 }
 
 #fancy_font{
-  font-family: 'Frijole', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -106,8 +108,11 @@ border-left: 25px solid white;
 border-right: 25px solid white;
 }
 
-form {
-  text-align: left;
+#form {
+  border: 2px dotted black;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
 }
 
 #prompt {
@@ -145,8 +150,32 @@ form {
   padding-left: 6%;
 }
 
+
+#landing_title{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    text-transform:uppercase;
+    text-shadow: 2px 2px gray;
+  }
+
+   #landing_text{
+    color: white;
+    font-family: 'Roboto', thin;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform:uppercase;
+    text-align: center;
+  }
+
+
+/*=============================================================================*/
 @media all and (max-width: 500px) {
-  #map-canvas {
+
+
+
+#map-canvas {
   float: left;
   margin:20px;
   width: 100%;
@@ -154,6 +183,30 @@ form {
   .non-map {
     float:left;
   }
+
+  /*Resize background video on landing page for mobile*/
+  #bgndVideo {
+    max-width: 100%;
+  }
+  #landing_banner_text {
+    max-width: 100%;
+  }
+
+  #landing_title{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform:uppercase;
+  }
+
+   #landing_text{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+  }
+
+
+
 }
 
 
