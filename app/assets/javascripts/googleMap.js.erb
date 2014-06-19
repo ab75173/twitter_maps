@@ -37,7 +37,6 @@ window.setTimeout(function(){
   if(count >= tweet_goal/3) {
     map.setZoom(13);
     circle.setRadius(3000)
-    $('#event_clue_one').removeClass('visuallyhidden');
     }
 } , 1500)
 
@@ -45,7 +44,6 @@ window.setTimeout(function(){
   if(count >= (tweet_goal * 2/3)) {
     map.setZoom(15);
     circle.setRadius(800)
-    $('#event_clue_two').removeClass('visuallyhidden');
     }
 } , 2500)
 
@@ -62,8 +60,6 @@ window.setTimeout(function(){
         map: map,
         title: 'PARTY!'
       });
-      $('#event_clue_one').addClass('visuallyhidden');
-      $('#event_clue_two').addClass('visuallyhidden');
       $('#event_address').removeClass('visuallyhidden');
     }
 } , 4000)

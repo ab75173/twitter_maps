@@ -2,9 +2,6 @@ var map;
 var circle;
 var latitude = 38.904930;
 var longitude = -77.034319;
-function offset(num) {
-    return Math.random() * (num)
-}
 
 function initialize() {
   var mapOptions = {
@@ -31,32 +28,36 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 google.maps.event.addDomListener(window, 'page:load', initialize);
 
+loop();
 
-var firstZoom = window.setTimeout(function(){
-    console.log('zoom');
-    map.setZoom(13);
-    circle.setRadius(3000)
-} , 3000)
+function loop() {
+    var firstZoom = window.setTimeout(function(){
+        console.log('zoom');
+        map.setZoom(13);
+        circle.setRadius(3000);
+    } , 3000)
 
-var secondZoom = window.setTimeout(function(){
-    console.log('zoom 2');
-    map.setZoom(15);
-    circle.setRadius(800)
-} , 6000)
+    var secondZoom = window.setTimeout(function(){
+        console.log('zoom 2');
+        map.setZoom(15);
+        circle.setRadius(800)
+    } , 6000)
 
-var finalZoom = window.setTimeout(function(){
-    console.log('zoom final');
-    var loc = new google.maps.LatLng(latitude, longitude);
-    map.setCenter(loc);
-    map.setZoom(17);
-    circle.setRadius(3)
-    var marker = new google.maps.Marker({
-      position: loc,
-      map: map,
-      title: 'PARTY!'
-  });
-    $('#event_address').removeClass('visuallyhidden');
-} , 9000)
+    var finalZoom = window.setTimeout(function(){
+        console.log('zoom final');
+        var loc = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(loc);
+        map.setZoom(17);
+        circle.setRadius(3)
+        var marker = new google.maps.Marker({
+          position: loc,
+          map: map,
+          title: 'PARTY!'
+      });
+    } , 9000)
+}
+
+var loopZoom = window.setInterval(loop, 12000)
 
 
 var mapStyle = [
