@@ -1,4 +1,6 @@
 var map;
+var plusOrMinusFirst = Math.random() < 0.5 ? -1 : 1;
+var plusOrMinusSecond = Math.random() < 0.5 ? -1 : 1;
 
 function initialize() {
   var mapOptions = {
@@ -19,28 +21,33 @@ function initialize() {
       center: new google.maps.LatLng(latitude, longitude),
     });
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.addDomListener(window, 'page:load', initialize);
+//the below listener may not be necessary?
+//google.maps.event.addDomListener(window, 'page:load', initialize);
+
 window.setTimeout(function(){
   if(count >= tweet_goal/3) {
-    var lat = latitude - (Math.random() * 0.02);
-    var lng = longitude + (Math.random() * 0.02);
+    var lat = latitude + (plusOrMinusFirst * (Math.random() * 0.033));
+    var lng = longitude + (plusOrMinusSecond * (Math.random() * 0.027));
     var loc = new google.maps.LatLng(lat, lng);
     map.setCenter(loc);
     map.setZoom(13);
     $('#event_clue_one').removeClass('visuallyhidden');
-    }
+  }
 } , 1500)
+
 window.setTimeout(function(){
   if(count >= (tweet_goal * 2/3)) {
-    var lat = latitude + (Math.random() * 0.009);
-    var lng = longitude - (Math.random() * 0.009);
+    var lat = latitude + (plusOrMinusFirst * (Math.random() * 0.0059));
+    var lng = longitude + (plusOrMinusSecond * (Math.random() * 0.006));
     var loc = new google.maps.LatLng(lat, lng);
     map.setCenter(loc);
     map.setZoom(15);
     $('#event_clue_two').removeClass('visuallyhidden');
-    }
+  }
 } , 2500)
+
 window.setTimeout(function(){
     if(count >= tweet_goal) {
       var lat = latitude;
@@ -48,7 +55,7 @@ window.setTimeout(function(){
       var loc = new google.maps.LatLng(lat, lng);
       map.setCenter(loc);
       map.setZoom(17);
-      circle.setRadius(3)
+      circle.setRadius(30);
       var marker = new google.maps.Marker({
         position: loc,
         map: map,
@@ -59,6 +66,7 @@ window.setTimeout(function(){
       $('#event_address').removeClass('visuallyhidden');
     }
 } , 4000)
+
 var mapStyle = [
     {
         "featureType": "water",
