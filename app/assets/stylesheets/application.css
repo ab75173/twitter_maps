@@ -21,6 +21,12 @@ html, body,
   padding: 0px;
 }
 
+#map_canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 #content_wrapper {
   border: 0;
   border-radius: 10px;
@@ -33,6 +39,13 @@ html, body,
   margin:25px 25px 25px 35px;
   width: 60%;
 }
+
+#map_canvas {
+  float: left;
+  margin:25px 25px 25px 35px;
+  width: 60%;
+}
+
 
 #twitter-widget-0 {
 
