@@ -38,5 +38,7 @@ A full list of user stories can be found by looking at [this Pivotal Tracker Pro
 
 ![ERD](ERD.png)
 
+*Within database, event location is stored as 1) zip code, 2) latitude & longitude, and 3) physical address
+
 ---
 ###### Written by Mikael Davis
