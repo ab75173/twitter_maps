@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.registration').toggleClass('visuallyhidden');
     $('.showOptions').toggleClass('visuallyhidden');
   });
+
 });
 
 
