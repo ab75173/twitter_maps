@@ -1,9 +1,12 @@
-<h1>Nearby Events</h1>
-<ul class="list-group">
-  <% @nearby_events.each do |event| %>
-    <h2><a href="/events/<%= event.id %>"><li class="list-group-item"><%= event["title"] %></li></a></h2>
-  <% end %>
-</ul>
-
+<div id="outside">
+  <div id="content_wrapper">
+    <h1>Nearby Events</h1>
+    <ul class="list-group">
+      <% @nearby_events.each do |event| %>
+        <h2><a href="/events/<%= event.id %>"><li class="list-group-item"><%= event["title"] %></li></a></h2>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 
