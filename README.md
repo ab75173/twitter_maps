@@ -32,7 +32,7 @@
 
 ### Backlog
 
-A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1102542)
+A full list of user stories can be found on [our Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1102542)
 
 ### ERD
 
