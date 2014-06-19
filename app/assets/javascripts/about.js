@@ -1,7 +1,7 @@
 var map;
 var circle;
-var latitude = 38.8951;
-var longitude = -77.0367;
+var latitude = 38.904930;
+var longitude = -77.034319;
 function offset(num) {
     return Math.random() * (num)
 }
