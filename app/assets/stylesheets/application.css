@@ -23,8 +23,9 @@ html, body,
 
 #map_canvas {
   height: 100%;
-  margin: 0px;
+  margin: 0 auto;
   padding: 0px;
+  width: 55%;
 }
 
 #content_wrapper {
@@ -40,11 +41,6 @@ html, body,
   width: 60%;
 }
 
-#map_canvas {
-  float: left;
-  margin:25px 25px 25px 35px;
-  width: 60%;
-}
 
 
 #twitter-widget-0 {

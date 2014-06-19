@@ -1,9 +1,14 @@
-var aboutMap;
-var aboutCircle;
+var map;
+var circle;
+var latitude = 38.8951;
+var longitude = -77.0367;
+function offset(num) {
+    return Math.random() * (num)
+}
 
 function initialize() {
   var mapOptions = {
-    center: new google.maps.LatLng(38.8951, -77.0367),
+    center: new google.maps.LatLng(latitude, longitude),
     zoom: 9,
     scrollwheel: false,
     disableDefaultUI: true,
@@ -14,12 +19,12 @@ function initialize() {
     styles: mapStyle,
     };
 
-  aboutMap = new google.maps.Map(document.getElementById("map_canvas"),
+  map = new google.maps.Map(document.getElementById("map_canvas"),
       mapOptions);
 
-  aboutCircle = new google.maps.Circle({
-      map: aboutMap,
-      center: new google.maps.LatLng(38.8951, -77.0367),
+  circle = new google.maps.Circle({
+      map: map,
+      center: new google.maps.LatLng(latitude, longitude),
       radius: 50000
     });
 }
@@ -29,29 +34,29 @@ google.maps.event.addDomListener(window, 'page:load', initialize);
 
 var firstZoom = window.setTimeout(function(){
     console.log('zoom');
-    aboutMap.setZoom(13);
-    aboutCircle.setRadius(3000)
+    map.setZoom(13);
+    circle.setRadius(3000)
 } , 3000)
 
 var secondZoom = window.setTimeout(function(){
     console.log('zoom 2');
-    aboutMap.setZoom(15);
-    aboutCircle.setRadius(800)
+    map.setZoom(15);
+    circle.setRadius(800)
 } , 6000)
 
 var finalZoom = window.setTimeout(function(){
     console.log('zoom final');
-    var loc = new google.maps.LatLng(38.8951, -77.0367);
-    aboutMap.setCenter(loc);
-    aboutMap.setZoom(17);
-    aboutCircle.setRadius(3)
+    var loc = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(loc);
+    map.setZoom(17);
+    circle.setRadius(3)
     var marker = new google.maps.Marker({
       position: loc,
-      map: aboutMap,
+      map: map,
       title: 'PARTY!'
   });
-//     $('#event_address').removeClass('visuallyhidden');
-// } , 9000)
+    $('#event_address').removeClass('visuallyhidden');
+} , 9000)
 
 
 var mapStyle = [
