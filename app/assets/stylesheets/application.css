@@ -16,6 +16,7 @@
  */
 html, body,
 
+body{ margin:0; padding:0; height:100%; width:100%; }
 
 #map-canvas {
   display: block;
@@ -166,6 +167,29 @@ border-right: 25px solid white;
 .contact {
   margin: 0 auto;
   width: 440px;
+}
+
+video#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(/assets/fire.jpg) no-repeat;
+  background-size: cover;
+}
+
+.form-group {
+
+
+}
+
+.btn btn-default{
+
+
 }
 
 
