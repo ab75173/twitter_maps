@@ -163,6 +163,11 @@ border-right: 25px solid white;
   width: 440px;
 }
 
+.contact {
+  margin: 0 auto;
+  width: 440px;
+}
+
 
 @media all and (max-width: 500px) {
 
