@@ -9,16 +9,18 @@
 Event.create([
   {hashtag: "#TEDDC",
   title: "sharing ideas in our nation's capital",
-  description: " A TED talk all about Politics, Law, and marble buildings",
-  latitude: 38.905197,
-  longitude: -77.037989,
+  description: "a conversation about Politics, Law, and marble buildings, you won't need to bring a shopping bag",
+  latitude: 38.88962,
+  longitude: -77.022977,
   datetime: "2014-09-12 13:00",
   hashtag_id: "478919592786395136",
   address: "1145 17th Street, NW",
   city: "Washington",
   state: "DC",
   zip_code: "20036",
-  tweet_goal: 10
+  tweet_goal: 10,
+  event_clue_one: "slightly centre-left, geographically speaking...",
+  event_clue_two: "three in a row, tic, tac, toe!"
   },
 
   {hashtag: "#WDIGRADU",
@@ -31,7 +33,8 @@ Event.create([
   address: "1355 15th Street NW",
   city: "Washington",
   state: "DC",
-  zip_code: "20005"
+  zip_code: "20005",
+  tweet_goal: 10
   },
 
   {hashtag: "#AWESOMELA",

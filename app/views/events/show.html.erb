@@ -4,6 +4,19 @@
 <input id="longitude" type="hidden" value="<%= @event.longitude %>">
 <input id="please ignore the data above, and enjoy a secret_sandwich" type="hidden" img src="http://upload.wikimedia.org/wikipedia/commons/2/20/Bolgona_sandwich.jpg">
 
+<div class="non_map">
+
+<div id="event_info">
+  <h1 id="event_title"><%= @event.title %></h1>
+  <p id="event_date_time"><%= @event.datetime.strftime("%m/%d/%Y") %> at <%= @event.datetime.strftime("%I:%M") %></p>
+  <p id="event_description"><%= @event.description %></p>
+  <p>you know when, now figure out where, tweet about it...</p>
+  <p class="visuallyhidden" id="event_clue_one"><%= @event.event_clue_one %></p>
+  <p class="visuallyhidden" id="event_clue_two"><%= @event.event_clue_two %></p>
+  <p id="event_hashtag"><%= @event.hashtag %></p>
+  <p class="visuallyhidden" id="event_address"><%= @event.address %></p>
+
+</div>
 
 <% if user_signed_in? %>
   <% if @favorite == nil %>
