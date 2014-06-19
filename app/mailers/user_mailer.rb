@@ -3,7 +3,8 @@ class UserMailer < ActionMailer::Base
 
   def notification_email(user)
     @user = user
-    mail(to: @user.email, subject: 'There\'s been activity on your event!')
+    @favorite = user.favorites.last
+    mail(to: @user.email, subject: 'You just subscribed to an event!')
   end
 
 end

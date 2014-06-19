@@ -6,10 +6,19 @@
   <body>
     <h1>WildFyre</h1>
     <p>
-      You just subscribed to an event!<br>
+      You just subscribed to <%= @favorite.event.title %>!<br>
     </p>
+
     <p>
-      To login to the site, just follow this link: <%= link_to 'Sign in', '/sign_in' %>.
+      <%= @favorite.event.description %>
+    </p>
+
+    <p>
+      Tweet <%= @favorite.event.hashtag %> to get this fire going! The more tweets we see, the more info we'll reveal on our event map!
+    </p>
+
+    <p>
+      <%= link_to 'Sign in to WildFyre', 'http://wild-fyre.herokuapp.com' %>
     </p>
   </body>
 </html>
