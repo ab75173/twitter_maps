@@ -8,7 +8,7 @@
 
 Event.create([
   {hashtag: "#TEDDC",
-  title: "Ted Talk on the Mall",
+  title: "sharing ideas in our nation's capital",
   description: " A TED talk all about Politics, Law, and marble buildings",
   latitude: 38.905197,
   longitude: -77.037989,
@@ -17,7 +17,8 @@ Event.create([
   address: "1145 17th Street, NW",
   city: "Washington",
   state: "DC",
-  zip_code: "20036"
+  zip_code: "20036",
+  tweet_goal: 10
   },
 
   {hashtag: "#WDIGRADU",
