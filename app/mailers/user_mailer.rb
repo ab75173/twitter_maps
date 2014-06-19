@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "do-not-reply@wildfyre.com"
 
   def notification_email(user)
     @user = user
