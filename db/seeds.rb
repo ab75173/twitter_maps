@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Event.create([
-  {hashtag: "#TEDDC",
-  title: "sharing ideas in our nation's capital",
-  description: "a conversation about Politics, Law, and marble buildings, you won't need to bring a shopping bag",
+  {hashtag: "#TedDC",
+  title: "Ted Talk DC",
+  description: "A conversation about Politics, Law, and marble buildings, you won't need to bring a shopping bag",
   latitude: 38.88962,
   longitude: -77.022977,
   datetime: "2014-09-12 13:00",
@@ -23,7 +23,7 @@ Event.create([
   event_clue_two: "three in a row, tic, tac, toe!"
   },
 
-  {hashtag: "#WDIGRADU",
+  {hashtag: "#WDIGradu",
   title: "WDI Class Graduation",
   description: "General Assembly WDI class graduation day!",
   latitude: 38.904853,
@@ -37,7 +37,7 @@ Event.create([
   tweet_goal: 10
   },
 
-  {hashtag: "#AWESOMELA",
+  {hashtag: "#AwesomeLA",
   title: "Los Angeles Party",
   description: "A huge, secret party. If you want to come, youre not invited.",
   latitude: 34.081193,
@@ -47,9 +47,37 @@ Event.create([
   address: "606 N Robertson Blvd",
   city: "West Hollywood",
   state: "CA",
-  zip_code: "90069"
+  zip_code: "90069",
+  tweet_goal: 10
   },
 
+  {hashtag: "#LetsGoFlyAKiteChicago",
+  title: "Kite-Flying Partay",
+  description: "Let's go fly a kite, up to the highest height.",
+  latitude: 41.8827,
+  longitude: -87.6227,
+  datetime: "2014-7-5 13:00",
+  hashtag_id: "479995307820720129",
+  address: "201 E Randolph St",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60602",
+  tweet_goal: 10
+  },
+
+  {hashtag: "#LetsPartyYallATL",
+  title: "Mystery Party in the Deep South",
+  description: "Moonshine, Sweet Tea Vodka, and lots of country music.",
+  latitude: 33.790537,
+  longitude: -84.368461,
+  datetime: "2014-8-15 20:00",
+  hashtag_id: "479996477524037635",
+  address: "600 Evelyn Street Northeast",
+  city: "Atlanta",
+  state: "GA",
+  zip_code: "30306",
+  tweet_goal: 10
+  },
   ])
 
 
