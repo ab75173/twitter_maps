@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   end
 
-def self.find_for_twitter_oauth(auth, current_user)
+  def self.find_for_twitter_oauth(auth, current_user)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
