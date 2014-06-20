@@ -4,12 +4,12 @@
       <h1>Subscriptions:</h1>
         <ul class="list-group">
           <% @favorites.each do |favorite| %>
-            <li class="list-group-item"><h2>
+            <li class="list-group-item"><h2 class='favTitle'>
               <!-- FAVORITE EVENT TITLE: -->
               <%= link_to favorite.event["title"],"/events/#{favorite.event.id}" %>
              <!--  BUTTON TO REMOVE FAVORITE: -->
               <%= form_for [@user, favorite], method: :delete do |f| %>
-                  <%= f.submit 'Unsubscribe', id: 'destroy' %>
+                  <%= f.submit 'Unsubscribe', id: 'destroy', class: 'unsubscribeButton' %>
               <% end %>
             </h2></li>
           <% end %>

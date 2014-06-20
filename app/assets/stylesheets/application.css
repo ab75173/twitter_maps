@@ -15,7 +15,6 @@
  *= require bootstrap.min
  */
 html, body,
-
 body{ margin:0; padding:0; height:100%; width:100%; }
 
 #map-canvas {
@@ -38,6 +37,12 @@ body{ margin:0; padding:0; height:100%; width:100%; }
   border-radius: 10px;
   margin: 20px;
   padding-top: 10px;
+}
+
+.video-section .pattern-overlay {
+padding: 0px;
+margin-top: 10%;
+min-height: 0px;
 }
 
 .visuallyhidden {
@@ -80,11 +85,10 @@ body{ margin:0; padding:0; height:100%; width:100%; }
   font-family: 'Roboto', sans-serif;
 }
 
-
 #outside {
-border-top: 15px solid white;
-border-left: 25px solid white;
-border-right: 25px solid white;
+  border-top: 15px solid white;
+  border-left: 25px solid white;
+  border-right: 25px solid white;
 }
 
 #form {
@@ -104,20 +108,26 @@ border-right: 25px solid white;
   width: 80%;
 }
 
-#destroy{
-  margin: 2%;
-}
-
 #fav {
   color: #000;
   font-family: 'Rock Salt', cursive;
   font-size: 20px;
   float: left;
   padding: 2%;
-  }
+}
 
 .favList{
   list-style-type: none;
+}
+
+.unsubscribeButton{
+  float: right;
+  margin: 0 auto;
+}
+
+.favTitle{
+  padding-bottom: 2%;
+
 }
 
 .favListContainer{
@@ -129,22 +139,22 @@ border-right: 25px solid white;
 }
 
 #landing_title{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 100px;
-    text-align: center;
-    text-transform:uppercase;
-    text-shadow: 2px 2px gray;
-  }
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  text-transform:uppercase;
+  text-shadow: 2px 2px gray;
+}
 
-   #landing_text{
-    color: white;
-    font-family: 'Roboto', thin;
-    font-weight: 400;
-    font-size: 25px;
-    text-transform:uppercase;
-    text-align: center;
-  }
+ #landing_text{
+  color: white;
+  font-family: 'Roboto', thin;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform:uppercase;
+  text-align: center;
+}
 
 .twitter-timeline {
   display: block;
@@ -179,52 +189,34 @@ video#bgvid {
   background-size: cover;
 }
 
-.form-group {
-
-
-}
-
-.btn btn-default{
-
-
-}
-
-
 @media all and (max-width: 500px) {
-
 
 #map-canvas {
   float: left;
   margin:20px;
   width: 100%;
 }
-  .non-map {
-    float:left;
-  }
+.non-map {
+  float:left;
+}
 
-  /*Resize background video on landing page for mobile*/
-  #bgndVideo {
-    max-width: 100%;
-  }
-  #landing_banner_text {
-    max-width: 100%;
-  }
-
-  #landing_title{
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    text-transform:uppercase;
-  }
-
-   #landing_text{
-    color: white;
-    font-size: 15px;
-    text-align: center;
-  }
-
-
-
+/*Resize background video on landing page for mobile*/
+#bgndVideo {
+  max-width: 100%;
+}
+#landing_banner_text {
+  max-width: 100%;
+}
+#landing_title{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-transform:uppercase;
+}
+ #landing_text{
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .about_footer {

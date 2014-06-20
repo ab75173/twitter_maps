@@ -17,27 +17,28 @@
     <p class="visuallyhidden" id="event_clue_two"><%= @event.event_clue_two %></p>
     <p class="visuallyhidden" id="event_address"> <%= @event.address %></p>
 
-    <div class="form-group">
-      <% if @is_fav == nil %>
+    <% if current_user != nil %>
+      <div class="form-group">
+        <% if @is_fav == nil %>
 
-        <%= form_tag(user_favorites_path(current_user.id), method: "post", authenticity_token: true) do %>
+          <%= form_tag(user_favorites_path(current_user.id), method: "post", authenticity_token: true) do %>
 
-            <%= hidden_field_tag(:event_id, @event.id) %>
-            <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
+              <%= hidden_field_tag(:event_id, @event.id) %>
+              <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
 
+            <% end %>
+
+        <% else %>
+
+          <%= form_tag(user_favorite_path(current_user.id, @is_fav.id), method: "delete", authenticity_token: true) do %>
+            <%= hidden_field_tag(@is_fav.id) %>
+            <%= submit_tag("Unsubscribe", class: "btn btn-default" ) %>
           <% end %>
 
-      <% else %>
-
-        <%= form_tag(user_favorite_path(current_user.id, @is_fav.id), method: "delete", authenticity_token: true) do %>
-          <%= hidden_field_tag(@is_fav.id) %>
-          <%= submit_tag("Unsubscribe", class: "btn btn-default" ) %>
         <% end %>
 
-      <% end %>
-
-    </div>
-
+      </div>
+    <% end  %>
 
 
   </div>

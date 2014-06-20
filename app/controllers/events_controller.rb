@@ -36,7 +36,9 @@ class EventsController < ApplicationController
   def show
     # GETS THE EVENT BY ITS ID IN PARAMS:
     @event = Event.find(params[:id])
-    @is_fav = current_user.favorites.find_by(event_id: @event.id)
+    if current_user != nil
+      @is_fav = current_user.favorites.find_by(event_id: @event.id)
+    end
 
     # FINDS AN EXISTING FAVORITE IF IT HAS CURRENT USER ID AND CURRENT EVENT ID
     if user_signed_in?
