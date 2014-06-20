@@ -41,4 +41,5 @@ A full list of user stories can be found on [our Pivotal Tracker Project](https:
 *Within database, event location is stored as 1) zip code, 2) latitude & longitude, and 3) physical address
 
 ---
-###### Written by Mikael Davis
+###### 2014 Team 'MiGa MART - Michael Davis, Gabe Snyder, Mary Hipp, Adam Barrett, Randy Lazt & Thomas Weaver.
+###### ReadMe written by Mikael Davis
