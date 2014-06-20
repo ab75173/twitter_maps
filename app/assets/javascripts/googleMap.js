@@ -23,6 +23,19 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
 //the below listener may not be necessary?
 //google.maps.event.addDomListener(window, 'page:load', initialize);
 

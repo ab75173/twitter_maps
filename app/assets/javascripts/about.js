@@ -26,7 +26,19 @@ function initialize() {
     });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.addDomListener(window, 'page:load', initialize);
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
 
 loop();
 

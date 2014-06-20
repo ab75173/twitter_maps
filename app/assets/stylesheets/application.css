@@ -207,52 +207,50 @@ video#bgvid {
 
 @media all and (max-width: 500px) {
 
-#map-canvas {
-  float: left;
-  margin: 20px;
-  width: 85%;
-}
+  #map-canvas {
+    float: left;
+    margin: 20px;
+    width: 85%;
+  }
 
-#event_title {
-  float: left;
-}
+  #event_title {
+    float: left;
+  }
 
-.non-map {
-  float:left;
-}
+  .non-map {
+    float:left;
+  }
 
-/*Resize background video on landing page for mobile*/
-#bgndVideo {
-  max-width: 100%;
-}
-#landing_banner_text {
-  max-width: 100%;
-}
-#landing_title{
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  text-transform:uppercase;
-}
+  /*Resize background video on landing page for mobile*/
+  #bgndVideo {
+    max-width: 100%;
+  }
+  #landing_banner_text {
+    max-width: 100%;
+  }
+  #landing_title{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform:uppercase;
+  }
 
- #landing_text{
-  color: white;
-  font-size: 15px;
-  text-align: center;
-}
+   #landing_text{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+  }
 
-video#bgvid {
-  background-color: black;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  height: 100%;
-  /*width: auto;
-  height: auto;*/
-  /*z-index: -100;
-  background-size: cover;*/
-}
-
-
+  video#bgvid {
+    background-color: black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    height: 100%;
+    /*width: auto;
+    height: auto;*/
+    /*z-index: -100;
+    background-size: cover;*/
+  }
 }
