@@ -2,6 +2,9 @@ var map;
 var circle;
 var latitude = 38.904930;
 var longitude = -77.034319;
+var plusOrMinusFirst = Math.random() < 0.5 ? -1 : 1;
+var plusOrMinusSecond = Math.random() < 0.5 ? -1 : 1;
+var event_marker;
 
 function initialize() {
   var mapOptions = {
@@ -21,8 +24,7 @@ function initialize() {
 
   circle = new google.maps.Circle({
       map: map,
-      center: new google.maps.LatLng(latitude, longitude),
-      radius: 50000
+      center: new google.maps.LatLng(latitude, longitude)
     });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -43,34 +45,44 @@ google.maps.event.addDomListener(window, 'load', initialize);
 loop();
 
 function loop() {
-    var firstZoom = window.setTimeout(function(){
-        console.log('zoom');
+    window.setTimeout(function(){
+        var loc = new google.maps.LatLng(latitude, longitude);
+        event_marker.setMap(null);
+        circle.setRadius(0)
+        map.setCenter(loc);
+        map.setZoom(9);
+    } , 2000)
+
+    window.setTimeout(function(){
+        var lat = latitude + (plusOrMinusFirst * (Math.random() * 0.033));
+        var lng = longitude + (plusOrMinusSecond * (Math.random() * 0.027));
+        var loc = new google.maps.LatLng(lat, lng);
+        map.setCenter(loc);
         map.setZoom(13);
-        circle.setRadius(3000);
-    }, 3000);
+    } , 4000)
 
-    var secondZoom = window.setTimeout(function(){
-        console.log('zoom 2');
+    window.setTimeout(function(){
+        var lat = latitude + (plusOrMinusFirst * (Math.random() * 0.0059));
+        var lng = longitude + (plusOrMinusSecond * (Math.random() * 0.006));
+        var loc = new google.maps.LatLng(lat, lng);
+        map.setCenter(loc);
         map.setZoom(15);
-        circle.setRadius(800);
-    }, 6000);
+    } , 6000)
 
-    var finalZoom = window.setTimeout(function(){
-        console.log('zoom final');
+    window.setTimeout(function(){
         var loc = new google.maps.LatLng(latitude, longitude);
         map.setCenter(loc);
         map.setZoom(17);
-        circle.setRadius(3);
-        var marker = new google.maps.Marker({
+        circle.setRadius(20)
+          event_marker = new google.maps.Marker({
           position: loc,
           map: map,
           title: 'PARTY!'
-      });
-    }, 9000);
+        });
+    } , 8000)
 }
 
-var loopZoom = window.setInterval(loop, 12000);
-
+var loopZoom = window.setInterval(loop, 8500)
 
 var mapStyle = [
     {
