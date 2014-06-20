@@ -33,6 +33,10 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda-matchers'
+  gem 'simplecov', '~> 0.7.1'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 gem 'httparty'

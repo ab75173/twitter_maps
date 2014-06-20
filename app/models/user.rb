@@ -7,12 +7,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, :omniauth_providers => [:twitter]
 
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+
   before_save :zip_to_coord
   def zip_to_coord
     response = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + zip_code)
     self.latitude = response["results"][0]["geometry"]["location"]["lat"].to_f
     self.longitude = response["results"][0]["geometry"]["location"]["lng"].to_f
-
   end
 
   def self.find_for_twitter_oauth(auth, current_user)

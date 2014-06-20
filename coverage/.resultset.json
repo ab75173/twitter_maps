@@ -1,0 +1,63 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/mikael/dev/twitter_maps/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/mikael/dev/twitter_maps/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/mikael/dev/twitter_maps/app/models/event.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/mikael/dev/twitter_maps/app/models/favorite.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1403280590
+  }
+}
