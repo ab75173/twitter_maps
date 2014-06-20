@@ -1,19 +1,25 @@
-<div id="outside">
-  <div id="content_wrapper">
-    <% if user_signed_in? %>
-      <h1>Subscriptions:</h1>
-        <ul class="list-group">
-          <% @favorites.each do |favorite| %>
-            <li class="list-group-item"><h2 class='favTitle'>
-              <!-- FAVORITE EVENT TITLE: -->
-              <%= link_to favorite.event["title"],"/events/#{favorite.event.id}" %>
-             <!--  BUTTON TO REMOVE FAVORITE: -->
-              <%= form_for [@user, favorite], method: :delete do |f| %>
-                  <%= f.submit 'Unsubscribe', id: 'destroy', class: 'unsubscribeButton' %>
-              <% end %>
-            </h2></li>
-          <% end %>
-        </ul>
-    <% end %>
+<div class='listBackground'>
+  <div id="outside">
+    <div id="content_wrapper">
+
+      <% if user_signed_in? %>
+        <h1 class='listHeader'>Subscriptions:</h1>
+
+          <ul class="list-group">
+            <% @favorites.each do |favorite| %>
+              <h2 class='favTitle'>
+                <li class="list-group-item">
+                <%= link_to favorite.event["title"],"/events/#{favorite.event.id}" %>
+              </h2>
+                <%= form_for [@user, favorite], method: :delete do |f| %>
+                  <%= f.submit 'Unsubscribe', id: 'destroy', class: 'unsubscribeButton btn' %>
+                <% end %>
+            </li>
+
+            <% end %>
+          </ul>
+      <% end %>
+
+    </div>
   </div>
 </div>

@@ -105,6 +105,22 @@ min-height: 0px;
 #outside {
 margin: 0 auto;
 max-width: 1200px;
+border-top: 15px solid white;
+margin: 0;
+  /*border-left: 25px solid white;*/
+  /*border-right: 25px solid white;*/
+}
+
+body .navbar-default {
+  margin: 0;
+}
+
+body .navbar{
+  margin-bottom: 0;
+}
+
+.listBackground #outline{
+  margin-top: 0;
 }
 
 #form {
@@ -137,13 +153,60 @@ max-width: 1200px;
 }
 
 .unsubscribeButton{
-  float: right;
-  margin: 0 auto;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 4%;
+}
+
+.edit_favorite{
+  display: inline-block;
 }
 
 .favTitle{
   padding-bottom: 2%;
+  display: inline-block;
+}
 
+.listBackground{
+  background-image: url('http://i4.minus.com/ibmsivLZq1sqws.jpg');
+  background-size: cover;
+  bottom: 0;
+  height: auto;
+  margin-top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  padding-top: 0;
+  right: 0;
+  width: auto;
+}
+
+ul .list-group-item{
+  background-color: rgba(255,255,255,.7);
+  border: none;
+  display: inline-block;
+}
+
+ul .list-group-item a{
+  color: #000;
+}
+
+ul h2 a .list-group-item{
+  color: #000;
+}
+
+.listHeader{
+  color: #fff;
+
+}
+
+.listWrapper{
+  margin: 0 auto;
+  width: 65%;
+}
+
+div .list-group{
+  margin: 0 auto;
+  width: 65%;
 }
 
 .favListContainer{
