@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require_directory ./every_page
 //= require bootstrap.min
-//= require search
