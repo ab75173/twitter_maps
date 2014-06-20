@@ -18,23 +18,24 @@
     <p class="visuallyhidden" id="event_address"> <%= @event.address %></p>
 
     <div class="form-group">
-      <% if user_signed_in? %>
-        <% if @favorite == nil %>
-          <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
-          <%= form_tag(user_favorites_path(current_user), method: "post",       authenticity_token: true) do %>
-            <%= hidden_field_tag(:event_id, @event.id, ) %>
-            <%= hidden_field_tag(:user_id, current_user.id, ) %>
+      <% if @is_fav == nil %>
+
+        <%= form_tag(user_favorites_path(current_user.id), method: "post", authenticity_token: true) do %>
+
+            <%= hidden_field_tag(:event_id, @event.id) %>
             <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
+
           <% end %>
-        <% elsif current_user.id != @favorite.user_id %>
-          <!-- SHOWS BUTTON TO 'subscribe' AN EVENT: -->
-          <%= form_tag(user_favorites_path(current_user), method: "post", authenticity_token: true) do %>
-            <%= hidden_field_tag(:event_id, @event.id, ) %>
-            <%= hidden_field_tag(:user_id, current_user.id, ) %>
-            <%= submit_tag("Subscribe", class: "btn btn-default" ) %>
-          <% end %>
+
+      <% else %>
+
+        <%= form_tag(user_favorite_path(current_user.id, @is_fav.id), method: "delete", authenticity_token: true) do %>
+          <%= hidden_field_tag(@is_fav.id) %>
+          <%= submit_tag("Unsubscribe", class: "btn btn-default" ) %>
         <% end %>
+
       <% end %>
+
     </div>
 
 

@@ -15,7 +15,6 @@ class EventsController < ApplicationController
         @user_lat = cookies["lat"]
         @user_long = cookies["long"]
       end
-
     end
 
     #defines perimeter that qualifies as nearby events
@@ -37,6 +36,8 @@ class EventsController < ApplicationController
   def show
     # GETS THE EVENT BY ITS ID IN PARAMS:
     @event = Event.find(params[:id])
+    @is_fav = current_user.favorites.find_by(event_id: @event.id)
+
     # FINDS AN EXISTING FAVORITE IF IT HAS CURRENT USER ID AND CURRENT EVENT ID
     if user_signed_in?
       @favorite = Favorite.find_by(event_id: @event.id, user_id: current_user.id)

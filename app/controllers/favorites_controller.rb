@@ -6,10 +6,12 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    current_user.favorites.create({
-      user_id: params[:user_id],
-      event_id: params[:event_id]
-      })
+    id = params[:event_id]
+    Favorite.create(event_id: id, user_id: current_user.id )
+    # current_user.favorites.create({
+    #   user_id: params[:user_id],
+    #   event_id: params[:event_id]
+    #   })
     UserMailer.notification_email(current_user).deliver
     redirect_to user_favorites_path(current_user)
   end
