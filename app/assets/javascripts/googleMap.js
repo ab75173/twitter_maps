@@ -23,8 +23,7 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-(function()
-{
+(function() {
   if( window.localStorage )
   {
     if( !localStorage.getItem( 'firstLoad' ) )

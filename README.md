@@ -1,12 +1,12 @@
-# Twitter Maps
+# WildFire
 
-### GA WDI DC April 2014, Project 1
+### GA WDI DC April 2014, Project 2
 
 ### Overview
 
-**Twitter_maps** is recreational web application designed to generate buzz for any special event by incrementally revealing its location on a map based on the amount of times a specified hashtag was tweeted. It was developed as a sample Rails project for the April 2014 Web Development Immersive course at General Assembly. It was developed over a 5 day sprint to model the agile software development process.
+**WildFire** is a recreational web application designed to generate buzz for any special event by incrementally revealing its location on a map based on the amount of times a specified hashtag was tweeted. It was developed as a sample Rails project for the April 2014 Web Development Immersive course at General Assembly. It was developed over a 5 day sprint to model the agile software development process.
 
-[Visit Twitter Maps]()
+[Visit WildFire](wild-fyre.herokuapp.com)
 
 ### Technologies Used
 
@@ -40,6 +40,15 @@ A full list of user stories can be found on [our Pivotal Tracker Project](https:
 
 *Within database, event location is stored as 1) zip code, 2) latitude & longitude, and 3) physical address
 
+##Created by:
+* [Adam Barrett](www.github.com/ab75173 "Adam Barrett")
+* [Mikael Davis](www.github.com/OKitsMikael  "Mikael Davis")
+* [Mary Hipp](www.github.com/maryhipp "Mary Hipp")
+* [Randy Latz](www.github.com/rmlatz "Randy Latz")
+* [Gabe Snyder](www.github.com/Gabe888 "Gabe Snyder")
+* [Thomas Weaver](www.github.com/thmsweaver "Thomas Weaver")
+
+
 ---
-###### 2014  - Team 'MiGa MART' - Michael Davis, Gabe Snyder, Mary Hipp, Adam Barrett, Randy Lazt & Thomas Weaver.
+
 ###### ReadMe written by Mikael Davis
