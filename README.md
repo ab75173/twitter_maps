@@ -36,9 +36,7 @@ A full list of user stories can be found on [our Pivotal Tracker Project](https:
 
 ### Initial Wireframes
 
-<img src="https://s3.amazonaws.com/uploads.hipchat.com/39979/759886/V3m71p6QtPZqfEw/IMAG0233.jpg" width=400px>
-
-![Wireframes](https://s3.amazonaws.com/uploads.hipchat.com/39979/759886/V3m71p6QtPZqfEw/IMAG0233.jpg)
+<img src="https://s3.amazonaws.com/uploads.hipchat.com/39979/759886/V3m71p6QtPZqfEw/IMAG0233.jpg" alt="wireframes" width=500px>
 
 ### ERD
 
