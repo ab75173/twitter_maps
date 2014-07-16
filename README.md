@@ -34,6 +34,12 @@
 
 A full list of user stories can be found on [our Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1102542)
 
+### Initial Wireframes
+
+<img src="https://s3.amazonaws.com/uploads.hipchat.com/39979/759886/V3m71p6QtPZqfEw/IMAG0233.jpg" width=400px>
+
+![Wireframes](https://s3.amazonaws.com/uploads.hipchat.com/39979/759886/V3m71p6QtPZqfEw/IMAG0233.jpg)
+
 ### ERD
 
 ![ERD](ERD.png)
